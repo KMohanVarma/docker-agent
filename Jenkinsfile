@@ -13,6 +13,7 @@ pipeline {
         }
         stage('Clean') {
             steps {
+                echo "${env.WORKSPACE}"
                 dir("${env.WORKSPACE}/"){
                     sh 'mvn clean'
                 }
