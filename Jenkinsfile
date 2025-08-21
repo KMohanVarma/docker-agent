@@ -12,8 +12,8 @@ pipeline {
             }
         }
         stage('Clean') {
-            steps {
-                sudo su -
+            sudo su -
+            steps {                
                 echo "${env.WORKSPACE}"
                 dir("${env.WORKSPACE}/"){
                     sh 'mvn clean'
