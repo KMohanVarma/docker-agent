@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        docker { image 'public.ecr.aws/docker/library/maven:3.9-sapmachine' }
+        docker { image 'public.ecr.aws/docker/library/maven:latest' }
     }
     stages {
         stage('Source') {
@@ -8,7 +8,7 @@ pipeline {
                 sh 'mvn --version'
                 sh 'git --version'
                 git branch: 'main',
-                    url: 'https://github.com/LinkedInLearning/essential-jenkins-2468076.git'
+                    url: 'https://github.com/KMohanVarma/docker-agent.git'
             }
         }
         stage('Clean') {
