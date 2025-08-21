@@ -11,8 +11,7 @@ pipeline {
                     url: 'https://github.com/KMohanVarma/docker-agent.git'
             }
         }
-        stage('Clean') {
-            sudo su -
+        stage('Clean') {            
             steps {                
                 echo "${env.WORKSPACE}"
                 dir("${env.WORKSPACE}/"){
